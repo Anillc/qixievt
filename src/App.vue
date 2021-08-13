@@ -72,7 +72,7 @@ export default
       @cycle = true
   }
   mounted: ->
-    window.addEventListener 'resize', => @$refs.imgs.forEach (target) => @mesure(target)
+    window.addEventListener 'resize', => @$refs.imgs?.forEach (target) => @mesure(target)
     emitter.on 'lot', (name, avatar) =>
       @pushLot sample(cards), URL.createObjectURL(avatar), name
 </script>
